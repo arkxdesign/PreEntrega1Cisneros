@@ -1,0 +1,25 @@
+.contenedor {
+    display: inline flex;
+    margin-top: 100px;
+    justify-content: center;
+    width: 33%;
+    text-align: center;
+}
+.productos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido {
+    position: relative;
+    overflow: hidden;
+}
+
+.precio {
+    font-weight: 700 !important;
+    color: black ;
+}
+
+.card {
+    border: 0 !important;
+}

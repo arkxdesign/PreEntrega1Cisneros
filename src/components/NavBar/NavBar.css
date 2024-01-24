@@ -1,0 +1,12 @@
+.logoRoots {
+    position: absolute;
+    left: 50px;
+    width: 300px;
+    top: 30px;
+}
+
+.navbar-nav{
+    margin-top: 25px;
+    margin-right: 150px;
+    font-weight: 600;
+}
