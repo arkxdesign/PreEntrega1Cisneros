@@ -3,7 +3,6 @@ import { Button, Card } from 'react-bootstrap'
 import './IntemListContainer.css'
 
 const ItemListContainer = ({imagen, descripcion, precio}) => {
-  console.log(imagen)
   return (
     <>
     <div className='contenedor'>

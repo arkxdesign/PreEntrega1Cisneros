@@ -24,9 +24,9 @@ const Products = () => {
   return (
     <>
     {
-        productos.map((p) => {
+        productos.map((p, key) => {
             return(
-                <ItemListContainer imagen={p.imagen} descripcion={p.descripcion} precio={p.precio}/>
+                <ItemListContainer key={key} imagen={p.imagen} descripcion={p.descripcion} precio={p.precio}/>
             )
         })
     }

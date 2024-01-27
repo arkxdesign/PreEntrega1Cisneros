@@ -1,8 +1,8 @@
 import './App.css'
 import CartWidget from './components/CartWidget/CartWidget'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import Greeting from './components/Greeting/Greeting'
 import NavBar from './components/NavBar/NavBar'
-import Products from './components/Products/products'
+import Products from './components/Products/Products'
 
 
 
@@ -11,6 +11,7 @@ function App() {
     <>
       <NavBar/>
       <CartWidget/>
+      <Greeting greeting={"BIENVENIDO!!!"}/>
       <Products/>
     </>
   )
