@@ -1,12 +1,21 @@
-.logoRoots {
-    position: absolute;
-    left: 50px;
-    width: 300px;
-    top: 30px;
+.container {
+    width: fit-content !important;
 }
 
 .navbar-nav{
     margin-top: 25px;
-    margin-right: 150px;
+    padding-left: 20%;
     font-weight: 600;
+}
+
+a{
+  color: #151515 !important;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover{
+  color: red !important;
+  font-weight: 600;
+  text-decoration: none !important;
 }

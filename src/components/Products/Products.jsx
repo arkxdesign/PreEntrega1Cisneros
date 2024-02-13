@@ -1,37 +1,45 @@
-import React from 'react'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
+/* eslint-disable no-unused-vars */
+import React,{ useState, useEffect } from 'react';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import { useParams } from 'react-router-dom';
 
 const Products = () => {
 
-    const productos = [
-        {
-          "imagen": "images1.jpg",
-          "descripcion": "Short MTB FOX-X1",
-          "precio": 2100
-        },
-        {
-          "imagen": "images2.jpg",
-          "descripcion": "Short MTB FOX RANGER",
-          "precio": 1800
-        },
-        {
-          "imagen": "images3.jpg",
-          "descripcion": "Short MTB FOX TRAZO0",
-          "precio": 3000
-        }    
-      ]
+  const [productos, setProductos] = useState([]);
+  const {categoriaId} = useParams()
+
+  useEffect(() => {
+
+      const fecthData = async () => {
+          try {
+              const response = await fetch("/productos.json");
+              const data = await response.json()
+
+              if(categoriaId){
+                const filtraProductos = data.filter((p) => p.categoria == categoriaId)
+                setProductos(filtraProductos)
+
+              }else{
+                  setProductos(data)        
+              }
+
+          } catch (error) {
+              console.log("Error en el fetch" + " " + error)
+          }
+      }
+      fecthData()
+  }, [categoriaId]);
 
   return (
-    <>
-    {
-        productos.map((p, key) => {
-            return(
-                <ItemListContainer key={key} imagen={p.imagen} descripcion={p.descripcion} precio={p.precio}/>
-            )
-        })
-    }
-    </>
-  )
+        <div className='itemListContainer'>
+            {productos.length == 0
+            ?
+            <p>CARGANDO...</p>
+            :
+            <ItemListContainer productos={productos}/>
+            }
+        </div>
+    )
 }
 
 export default Products

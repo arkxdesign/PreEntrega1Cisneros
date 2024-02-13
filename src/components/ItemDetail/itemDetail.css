@@ -1,0 +1,54 @@
+.cardProductDetail {
+  margin-top: 150px;
+  width: 100%;
+}
+
+.itemProduct {
+  width: auto !important;
+  height: 370px !important;
+}
+
+.productPrice {
+  font-weight: 600 !important;
+  font-size: 28px !important;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;     
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+}
+
+.flex-container > div{
+  padding: 8px;
+}
+
+.buttonL {
+  border-radius: 10px 0px 0px 10px !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+}
+
+.buttonR {
+  border-radius: 0px 10px 10px 0px !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+}
+
+.contador {
+  border-radius: 0px 0px 0px 0px !important;
+  font-weight: 600 !important;
+  width: 80px;
+}
+
+.buttonAgregar {
+  margin-top: 20px !important;
+  border-radius: 10px 10px 10px 10px !important;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;      
+}

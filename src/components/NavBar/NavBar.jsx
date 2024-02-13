@@ -1,9 +1,10 @@
 import React from 'react'
-import logoRoots from '/logoRoots.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css';
+import { Link, NavLink } from 'react-router-dom';
+import { NavDropdown } from 'react-bootstrap';
 
 
 const NavBar = () => {
@@ -11,11 +12,28 @@ const NavBar = () => {
     <>
       <Navbar data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home"><img src={logoRoots} className='logoRoots' alt="logo ROOTS" /></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">START</Nav.Link>
+            <Link to='/'>
+              <Nav.Link href="#home">START</Nav.Link>
+            </Link>
             <Nav.Link href="#features">ROOTS</Nav.Link>
-            <Nav.Link href="#pricing">PRODUCT</Nav.Link>
+            <NavDropdown title="PRODUCTS" id="basic-nav-dropdown">
+              <NavDropdown.Item>
+                <NavLink to={'categoria/RANGER'}>
+                  RANGER
+                </NavLink>
+              </NavDropdown.Item>                
+              <NavDropdown.Item>
+                <NavLink to={'categoria/FLOW LINE'}>
+                  FLOW LINE
+                </NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <NavLink to={'categoria/RIDERX'}>
+                  RIDERX
+                </NavLink>
+              </NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link href="#contact">CONTACT US</Nav.Link>
           </Nav>
         </Container>
