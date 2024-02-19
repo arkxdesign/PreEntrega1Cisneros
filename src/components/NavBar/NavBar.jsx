@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css';
 import { Link, NavLink } from 'react-router-dom';
 import { NavDropdown } from 'react-bootstrap';
+import CartContext from '../Context/CartProvider';
 
 
 const NavBar = () => {
+  const {proximamente} = useContext(CartContext)
+
   return (
     <>
       <Navbar data-bs-theme="dark">
@@ -16,7 +19,7 @@ const NavBar = () => {
             <Link to='/'>
               <Nav.Link href="#home">START</Nav.Link>
             </Link>
-            <Nav.Link href="#features">ROOTS</Nav.Link>
+            <Nav.Link onClick={proximamente}>ROOTS</Nav.Link>
             <NavDropdown title="PRODUCTS" id="basic-nav-dropdown">
               <NavDropdown.Item>
                 <NavLink to={'categoria/RANGER'}>
@@ -34,7 +37,7 @@ const NavBar = () => {
                 </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#contact">CONTACT US</Nav.Link>
+            <Nav.Link onClick={proximamente}>CONTACT US</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

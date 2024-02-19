@@ -1,15 +1,18 @@
-import React from 'react'
-import logoCart from '/cart.svg'
-import './CartWidget.css'
+import React, { useContext } from 'react';
+import logoCart from '/cart.svg';
+import './CartWidget.css';
+import CartContext from '../Context/CartProvider';
 
 const CartWidget = () => {
-  return (
-    <div className='cart'>
-        <img src={logoCart} className='logoCart' alt="Cart" />
-        <div className='bgContador'>
-            <p>0</p>
-        </div>
-    </div>
+  const {cart} = useContext(CartContext);
+
+  return (  
+      <div className='cart'>
+          <img src={logoCart} className='logoCart' alt="Cart" />
+          <div className='bgContador'>
+              <p>{cart}</p>
+          </div>
+      </div>
   )
 }
 export default CartWidget

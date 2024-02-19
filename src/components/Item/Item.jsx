@@ -1,10 +1,10 @@
-import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import './Item.css'
 import { Link } from 'react-router-dom';
 
 const Item = ({producto}) => {
     const {id, imagen, descripcion, precio} = producto;
+
   return (
     <>
     <div className='contenedor'>

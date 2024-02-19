@@ -23,13 +23,11 @@ const Contador = () => {
 
   return (
     <>
-        <div className='buttonContainer'>
-        <Button className="buttonL" variant="dark" onClick={decrementar}>-</Button>
-        <Button className="contador" variant="dark">{contador}</Button>
-        <Button className="buttonR" variant="dark" onClick={incrementar}>+</Button>
-        </div> 
-        <div className='buttonContainer'>
-        <Button className='buttonAgregar' variant="dark" onClick={agregarCarrito}>Agregar al carrito</Button>
+        <div>
+        <Button variant="dark" onClick={decrementar}>-</Button>
+        <Button variant="dark">{contador}</Button>
+        <Button variant="dark" onClick={incrementar}>+</Button>
+        <Button variant="dark" className='ml-3' onClick={agregarCarrito}>Agregar al carrito</Button>
         </div>
     </>
   )

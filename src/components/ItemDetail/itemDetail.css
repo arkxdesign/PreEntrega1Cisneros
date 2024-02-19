@@ -1,4 +1,21 @@
+.thImg {
+  width: 40px;
+  padding: 5px;
+}
+.thCol {
+font-size: 14px;
+font-weight: 500;
+padding-left: 5px;
+}
+.thColTotal {
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 5px;
+  text-align: right;
+  font-weight: bold;
+  }
 .cardProductDetail {
+  position: relative;
   margin-top: 150px;
   width: 100%;
 }
@@ -8,11 +25,21 @@
   height: 370px !important;
 }
 
+.productDescription {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 10px;
+}
+
 .productPrice {
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  padding: 10px;
+}
+.productTotal{
   font-weight: 600 !important;
   font-size: 28px !important;
 }
-
 .flex-container {
   display: flex;
   justify-content: center;     
@@ -41,14 +68,39 @@
   border-radius: 0px 0px 0px 0px !important;
   font-weight: 600 !important;
   width: 80px;
+  cursor: none !important;
 }
 
 .buttonAgregar {
+  width: 154px;
+  margin-top: 20px !important;
+  border-radius: 10px 10px 10px 10px !important;
+}
+
+.buttonPagar {
+  background-color: red !important;
+  border-color: red !important;
+  width: 154px;
   margin-top: 20px !important;
   border-radius: 10px 10px 10px 10px !important;
 }
 
 .buttonContainer {
+  width: 200px;
   display: flex;
   justify-content: center;      
+}
+
+.sinStock {
+  margin-top: -10px;
+  width: 210px;
+  font-size: 9px;
+  color: red;
+}
+
+.conStock {
+  margin-top: -10px;
+  width: 210px;
+  font-size: 9px;
+  color: green;
 }

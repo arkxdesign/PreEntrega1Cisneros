@@ -7,23 +7,31 @@ import Products from './components/Products/Products';
 import Error404 from './components/Error404/Error404';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
+import { CartProvider } from './components/Context/CartProvider';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <div className='container'>
-          <Logotipo/>
-          <NavBar/>
-          <CartWidget/>
+        <CartProvider>
+          <div className='containerHeader'>
+            <Logotipo/>
+            <NavBar/>
+            <CartWidget/>
+          </div>
+          <div className='containerBody'>
             <Routes>
               <Route path='/' element={<Products/>} />
               <Route path='/categoria/:categoriaId' element={<Products/>} />
-              <Route path='/contenido/:id' element={<ItemDetailContainer/>} />
+              <Route path='/contenido/:id' element={<ItemDetailContainer/>} />              
               <Route path='*' element={<Error404/>} />
             </Routes>
-        </div>
-        <Footer/>
+          </div>
+          <div className='footerContainer'>
+            <Footer />
+          </div>
+          
+        </CartProvider>
       </BrowserRouter>
     </>
   )

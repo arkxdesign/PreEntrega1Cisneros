@@ -2,7 +2,7 @@
     {
         "id": 1,
         "imagen": "images1.jpg",
-        "descripcion": "Short MTB FOX-X1",
+        "descripcion": "SHORT MTB FOX-X1FX",
         "precio": 2100,
         "stock": 10,
         "categoria": "RIDERX"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "imagen": "images2.jpg",
-        "descripcion": "Short MTB FOX RANGER-DB",
+        "descripcion": "SHORT MTB FOX RANGER-DBFX",
         "precio": 1800,
         "stock": 10,
         "categoria": "RANGER"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "imagen": "images3.jpg",
-        "descripcion": "Short MTB FOX TRAZO-0",
+        "descripcion": "SHORT MTB FOX TRAZO-0FX",
         "precio": 3000,
         "stock": 10,
         "categoria": "FLOW LINE"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "imagen": "images4.jpg",
-        "descripcion": "Short MTB FOX-X1",
+        "descripcion": "SHORT MTB FOX-X1FX",
         "precio": 2100,
         "stock": 10,
         "categoria": "RIDERX"
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "imagen": "images5.jpg",
-        "descripcion": "Short MTB FOX RANGER-TZ",
+        "descripcion": "SHORT MTB FOX RANGER-TZFX",
         "precio": 1800,
         "stock": 10,
         "categoria": "RANGER"
@@ -42,7 +42,7 @@
     {
         "id": 6,
         "imagen": "images6.jpg",
-        "descripcion": "Short MTB FOX TRAZO-1",
+        "descripcion": "SHORT MTB FOX TRAZO-1FX",
         "precio": 3000,
         "stock": 10,
         "categoria": "FLOW LINE"
@@ -50,7 +50,7 @@
     {
         "id": 7,
         "imagen": "images7.jpg",
-        "descripcion": "Short MTB FOX-X2",
+        "descripcion": "SHORT MTB FOX-X2FX",
         "precio": 2100,
         "stock": 10,
         "categoria": "RIDERX"
@@ -58,7 +58,7 @@
     {
         "id": 8,
         "imagen": "images8.jpg",
-        "descripcion": "Short MTB FOX RANGER-FLW",
+        "descripcion": "SHORT MTB FOX RANGER-FLWFX",
         "precio": 1800,
         "stock": 10,
         "categoria": "RANGER"
@@ -66,7 +66,7 @@
     {
         "id": 9,
         "imagen": "images9.jpg",
-        "descripcion": "Short MTB FOX TRAZO-3",
+        "descripcion": "SHORT MTB FOX TRAZO-3FX",
         "precio": 3000,
         "stock": 10,
         "categoria": "FLOW LINE"
@@ -74,7 +74,7 @@
     {
         "id": 10,
         "imagen": "images10.jpg",
-        "descripcion": "Short MTB FOX-X3",
+        "descripcion": "SHORT MTB FOX-X3FX",
         "precio": 2100,
         "stock": 10,
         "categoria": "RIDERX"
@@ -82,7 +82,7 @@
     {
         "id": 11,
         "imagen": "images11.jpg",
-        "descripcion": "Short MTB FOX RANGER-X",
+        "descripcion": "SHORT MTB FOX RANGER-XFX",
         "precio": 1800,
         "stock": 10,
         "categoria": "RANGER"
@@ -90,7 +90,7 @@
     {
         "id": 12,
         "imagen": "images12.jpg",
-        "descripcion": "Short MTB FOX TRAZO-4",
+        "descripcion": "SHORT MTB FOX TRAZO-4FX",
         "precio": 3000,
         "stock": 10,
         "categoria": "FLOW LINE"
