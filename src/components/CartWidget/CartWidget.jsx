@@ -1,12 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import logoCart from '/cart.svg';
 import './CartWidget.css';
 import CartContext from '../Context/CartProvider';
 
 const CartWidget = () => {
   const {cart} = useContext(CartContext);
-
-  console.log(cart);
+  
 
   return (  
       <div className='cart'>

@@ -24,17 +24,14 @@ const Counter = ({producto}) => {
     const agregarCarrito = () => {
         if(cart.lenght == 0){            
             setCart(contador);
-            const cantidad =  contador;
-            //setShoppingCart([...shoppingCart, { producto, cantidad }]);
             setContador(1)
-            swal("AGREGASTE" + " " + cantidad + " " + producto.descripcion  + " " + "AL CARRITO, LA CANTIDAD ACTUALIZADA ES DE " + updateCart + " PRODUCTOS." );
+            
         } else {
             const updateCart = cart + contador;
             const cantidad =  contador;
             setCart(updateCart)
             setShoppingCart([...shoppingCart, { producto, cantidad }]);
             setContador(1)
-            swal("AGREGASTE" + " " + cantidad + " " + producto.descripcion  + " " + "AL CARRITO, LA CANTIDAD ACTUALIZADA ES DE " + updateCart + " PRODUCTOS." );
         }
     }
     

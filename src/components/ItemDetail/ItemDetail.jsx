@@ -2,23 +2,30 @@ import './itemDetail.css';
 import Counter from '../Counter/Counter';
 import { useContext } from 'react';
 import CartContext from '../Context/CartProvider';
+import TrashSvg from '/trash-solid.svg'
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({producto}) => {
-  const {shoppingCart, cart} = useContext(CartContext);
+  const { cart, setCart, shoppingCart, setShoppingCart} = useContext(CartContext);
   const cartWithTotals = shoppingCart.reduce((cart, item) => {
     const existingProduct = cart.find((prod) => prod.producto.id === item.producto.id);
     if (existingProduct) {      
       existingProduct.cantidad += item.cantidad;
       existingProduct.total += item.cantidad * item.producto.precio;
-      //existingProduct.stock -= item.producto.stock - item.cantidad;
     } else {
       cart.push({ ...item, total: item.cantidad * item.producto.precio});
-      localStorage.setItem("cart", JSON.stringify(cart));      
     }
-    console.log(cart)
     return cart;
   }, []);
   const totalSum = cartWithTotals.reduce((sum, item) => sum + item.total,0);
+
+  const deleteProductItem = (idProduct) => {
+        const newCart = shoppingCart.filter(item => item.producto.id !== idProduct);
+        const newCount = newCart.reduce((sum, item) => sum + item.cantidad,0);
+        setShoppingCart(newCart)
+        setCart(newCount)
+        // window.location.reload().preventDefault();
+}
   
   return (
     <>  
@@ -68,7 +75,11 @@ const ItemDetail = ({producto}) => {
                         {item.producto.stock-item.cantidad >= 0 ? <div className='conStock'>SI COMPRAS 2 O MÁS PRODUCTOS EL ENVIO ES GRATIS!</div> : <div className='sinStock'>YA NO HAY EXISTENCIAS DISPONIBLE, SI REALIZA LA COMPRA ENTRARA A PRODUCCION Y EL FALTANTE SE ENTREGARA EN 30 DIAS.</div>}
                           Disponibles: {item.producto.stock - item.cantidad}
                         </th>
-                        <th scope='col'></th>
+                        <th scope='col'>
+                          <Link to={`/contenido/${item.producto.id}`}>
+                            <img className='trashIcon' src={TrashSvg} onClick={() => deleteProductItem(item.producto.id)}/>
+                          </Link>
+                        </th>
                       </tr>
                     </tbody>
                   ))}
