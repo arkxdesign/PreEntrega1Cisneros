@@ -1,12 +1,15 @@
 import './itemDetail.css';
 import Counter from '../Counter/Counter';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import CartContext from '../Context/CartProvider';
 import TrashSvg from '/trash-solid.svg'
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const ItemDetail = ({producto}) => {
   const { cart, setCart, shoppingCart, setShoppingCart} = useContext(CartContext);
+  
+  
   const cartWithTotals = shoppingCart.reduce((cart, item) => {
     const existingProduct = cart.find((prod) => prod.producto.id === item.producto.id);
     if (existingProduct) {      
@@ -18,14 +21,28 @@ const ItemDetail = ({producto}) => {
     return cart;
   }, []);
   const totalSum = cartWithTotals.reduce((sum, item) => sum + item.total,0);
-
+  
   const deleteProductItem = (idProduct) => {
-        const newCart = shoppingCart.filter(item => item.producto.id !== idProduct);
-        const newCount = newCart.reduce((sum, item) => sum + item.cantidad,0);
-        setShoppingCart(newCart)
-        setCart(newCount)
-        // window.location.reload().preventDefault();
-}
+    const newCart = shoppingCart.filter(item => item.producto.id !== idProduct);
+    const newCount = newCart.reduce((sum, item) => sum + item.cantidad,0);
+    setShoppingCart(newCart)
+    setCart(newCount)
+  }
+  const decrementProductItem = () => {
+    cartWithTotals.map((item, index) => (
+       console.log(item.cantidad, item.producto.id)
+    ))
+  
+  }
+  
+  
+  const incrementProductItem = (idProduct) => {
+    const newCart = shoppingCart.filter(item => item.producto.id !== idProduct);
+    const newCount = newCart.reduce((res, item) => res + item.cantidad,0);
+    setShoppingCart(newCart)
+    setCart(newCount +1)
+  }
+  
   
   return (
     <>  
@@ -45,8 +62,8 @@ const ItemDetail = ({producto}) => {
         </div>
         {cart >= 1 
         ?
-        <div className="item3">      
-              <div>
+        <div className="item3">
+              <div className='containerCarrito'>
                 <div className='productDescription'>CARRITO DE COMPRA</div>
                 <div>
                 <h3></h3>
@@ -63,7 +80,8 @@ const ItemDetail = ({producto}) => {
                           {item.producto.descripcion} 
                         </th>
                         <th scope='col' className='thCol'>
-                          {item.producto.precio} x {item.cantidad} 
+                          {item.producto.precio} x <Button onClick={() => decrementProductItem(item.producto.id)}>-</Button>{item.cantidad}<Button onClick={incrementProductItem}>+</Button> 
+                          
                         </th>
                         <th scope='col' className='thColTotal'>
                           ${item.total}
@@ -76,9 +94,7 @@ const ItemDetail = ({producto}) => {
                           Disponibles: {item.producto.stock - item.cantidad}
                         </th>
                         <th scope='col'>
-                          <Link to={`/contenido/${item.producto.id}`}>
                             <img className='trashIcon' src={TrashSvg} onClick={() => deleteProductItem(item.producto.id)}/>
-                          </Link>
                         </th>
                       </tr>
                     </tbody>

@@ -54,7 +54,7 @@ const Counter = ({producto}) => {
         </div>
         {cart >= 1 ? 
         <div className='buttonContainer'>
-        <Button className='buttonPagar' variant="dark" onClick={(pagarCarrito)}>Pagar ahora</Button>
+        <Button className='buttonPagar' variant="dark" onClick={pagarCarrito}>Pagar ahora</Button>
         </div>
         : 
         null

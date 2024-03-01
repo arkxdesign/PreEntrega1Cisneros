@@ -32,6 +32,10 @@ padding-left: 5px;
   padding: 10px;
 }
 
+.containerCarrito{
+  padding-left: 50px;
+}
+
 .productPrice {
   font-weight: 600 !important;
   font-size: 22px !important;
