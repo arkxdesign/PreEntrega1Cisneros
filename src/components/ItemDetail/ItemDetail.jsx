@@ -2,13 +2,11 @@ import './itemDetail.css';
 import Counter from '../Counter/Counter';
 import { useContext, useState } from 'react';
 import CartContext from '../Context/CartProvider';
-import TrashSvg from '/trash-solid.svg'
-import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import TrashSvg from '/assets/ico/trash-solid.svg'
 
 const ItemDetail = ({producto}) => {
   const { cart, setCart, shoppingCart, setShoppingCart} = useContext(CartContext);
-  
+  const [shopingCart, setShopingCart] = useState(producto.cantidad)
   
   const cartWithTotals = shoppingCart.reduce((cart, item) => {
     const existingProduct = cart.find((prod) => prod.producto.id === item.producto.id);
@@ -20,6 +18,7 @@ const ItemDetail = ({producto}) => {
     }
     return cart;
   }, []);
+
   const totalSum = cartWithTotals.reduce((sum, item) => sum + item.total,0);
   
   const deleteProductItem = (idProduct) => {
@@ -28,22 +27,10 @@ const ItemDetail = ({producto}) => {
     setShoppingCart(newCart)
     setCart(newCount)
   }
-  const decrementProductItem = () => {
-    cartWithTotals.map((item, index) => (
-       console.log(item.cantidad, item.producto.id)
-    ))
-  
-  }
-  
-  
-  const incrementProductItem = (idProduct) => {
-    const newCart = shoppingCart.filter(item => item.producto.id !== idProduct);
-    const newCount = newCart.reduce((res, item) => res + item.cantidad,0);
-    setShoppingCart(newCart)
-    setCart(newCount +1)
-  }
-  
-  
+
+
+
+
   return (
     <>  
     <div className='cardProductDetail'>
@@ -80,7 +67,7 @@ const ItemDetail = ({producto}) => {
                           {item.producto.descripcion} 
                         </th>
                         <th scope='col' className='thCol'>
-                          {item.producto.precio} x <Button onClick={() => decrementProductItem(item.producto.id)}>-</Button>{item.cantidad}<Button onClick={incrementProductItem}>+</Button> 
+                          {item.producto.precio} x {item.cantidad}
                           
                         </th>
                         <th scope='col' className='thColTotal'>

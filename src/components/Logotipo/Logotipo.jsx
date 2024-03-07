@@ -1,5 +1,5 @@
 import React from 'react'
-import logoRoots from '/logoRoots.svg';
+import logoRoots from '/assets/logotipos/logoRoots.svg';
 import './Logotipo.css'
 import { NavLink } from 'react-router-dom';
 

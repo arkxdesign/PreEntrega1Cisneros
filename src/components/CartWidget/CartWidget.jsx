@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import logoCart from '/cart.svg';
+import logoCart from '/assets/ico/cart.svg';
 import './CartWidget.css';
 import CartContext from '../Context/CartProvider';
 

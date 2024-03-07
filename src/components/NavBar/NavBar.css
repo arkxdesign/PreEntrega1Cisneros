@@ -19,3 +19,25 @@ a:hover{
   font-weight: 600;
   text-decoration: none !important;
 }
+
+.divNav{
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 20px;
+  font-size: large;
+  font-weight: 600; 
+}
+
+.divNavDrop{
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 20px;
+  font-size: large;
+  font-weight: 600;
+}
+
+.divNav:hover{
+  color: red !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "imagen": "images1.jpg",
+        "imagen": "assets/products/images1.jpg",
         "descripcion": "SHORT MTB FOX-X1FX",
         "precio": 2100,
         "stock": 10,
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "imagen": "images2.jpg",
+        "imagen": "assets/products/images2.jpg",
         "descripcion": "SHORT MTB FOX RANGER-DBFX",
         "precio": 1800,
         "stock": 10,
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "imagen": "images3.jpg",
+        "imagen": "assets/products/images3.jpg",
         "descripcion": "SHORT MTB FOX TRAZO-0FX",
         "precio": 3000,
         "stock": 10,
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "imagen": "images4.jpg",
+        "imagen": "assets/products/images4.jpg",
         "descripcion": "SHORT MTB FOX-X1FX",
         "precio": 2100,
         "stock": 10,
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "imagen": "images5.jpg",
+        "imagen": "assets/products/images5.jpg",
         "descripcion": "SHORT MTB FOX RANGER-TZFX",
         "precio": 1800,
         "stock": 10,
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "imagen": "images6.jpg",
+        "imagen": "assets/products/images6.jpg",
         "descripcion": "SHORT MTB FOX TRAZO-1FX",
         "precio": 3000,
         "stock": 10,
@@ -49,7 +49,7 @@
     },
     {
         "id": 7,
-        "imagen": "images7.jpg",
+        "imagen": "assets/products/images7.jpg",
         "descripcion": "SHORT MTB FOX-X2FX",
         "precio": 2100,
         "stock": 10,
@@ -57,7 +57,7 @@
     },
     {
         "id": 8,
-        "imagen": "images8.jpg",
+        "imagen": "assets/products/images8.jpg",
         "descripcion": "SHORT MTB FOX RANGER-FLWFX",
         "precio": 1800,
         "stock": 10,
@@ -65,7 +65,7 @@
     },
     {
         "id": 9,
-        "imagen": "images9.jpg",
+        "imagen": "assets/products/images9.jpg",
         "descripcion": "SHORT MTB FOX TRAZO-3FX",
         "precio": 3000,
         "stock": 10,
@@ -73,7 +73,7 @@
     },
     {
         "id": 10,
-        "imagen": "images10.jpg",
+        "imagen": "assets/products/images10.jpg",
         "descripcion": "SHORT MTB FOX-X3FX",
         "precio": 2100,
         "stock": 10,
@@ -81,7 +81,7 @@
     },
     {
         "id": 11,
-        "imagen": "images11.jpg",
+        "imagen": "assets/products/images11.jpg",
         "descripcion": "SHORT MTB FOX RANGER-XFX",
         "precio": 1800,
         "stock": 10,
@@ -89,7 +89,7 @@
     },
     {
         "id": 12,
-        "imagen": "images12.jpg",
+        "imagen": "assets/products/images12.jpg",
         "descripcion": "SHORT MTB FOX TRAZO-4FX",
         "precio": 3000,
         "stock": 10,
