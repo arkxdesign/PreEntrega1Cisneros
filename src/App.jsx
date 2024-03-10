@@ -8,6 +8,7 @@ import Error404 from './components/Error404/Error404';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 import { CartProvider } from './components/Context/CartProvider';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             <Routes>
               <Route path='/' element={<Products/>} />
               <Route path='/categoria/:categoriaId' element={<Products/>} />
-              <Route path='/contenido/:id' element={<ItemDetailContainer/>} />              
+              <Route path='/contenido/:id' element={<ItemDetailContainer/>} />
+              <Route path='/checkout' element={<Checkout/>} />              
               <Route path='*' element={<Error404/>} />
             </Routes>
           </div>

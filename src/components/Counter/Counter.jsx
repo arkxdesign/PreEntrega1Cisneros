@@ -1,7 +1,7 @@
-import React,{useContext, useState} from 'react'
+import {useContext, useState} from 'react'
 import { Button } from 'react-bootstrap'
 import CartContext from '../Context/CartProvider'
-import swal from 'sweetalert'
+import { NavLink } from 'react-router-dom'
 
 const Counter = ({producto}) => {        
 
@@ -35,13 +35,6 @@ const Counter = ({producto}) => {
         }
     }
     
-    const pagarCarrito = () => {
-        setCart(0)
-        setContador(1)
-        setShoppingCart([]);
-        swal("Tú pago se proceso con exito, gracias por tu compra!!")
-    }
-    
   return (
     <>
         <div className='buttonContainer'>
@@ -54,7 +47,9 @@ const Counter = ({producto}) => {
         </div>
         {cart >= 1 ? 
         <div className='buttonContainer'>
-        <Button className='buttonPagar' variant="dark" onClick={pagarCarrito}>Pagar ahora</Button>
+        <NavLink to={'/checkout'}>
+            <Button className='buttonPagar' variant="dark">Pagar ahora</Button>            
+        </NavLink>           
         </div>
         : 
         null

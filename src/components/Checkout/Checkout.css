@@ -1,0 +1,59 @@
+.containerCheckout{
+    margin-top: 200px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-content: space-between;
+
+}
+.containerForm{
+    width: 50%;
+    padding-left: 20%;
+    padding-top: 20px;
+}
+.containerCart{
+    width: 50%;
+    padding-right: 20%;
+}
+.formInput{
+    margin-bottom: 15px;
+    padding: 7px;
+    width: 80%;
+    background-color: rgba(rgba(212, 11, 11, 0.678), green, blue, alpha);
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    border-color: rgb(88, 88, 88);
+    border-radius: 10px;
+}
+.buttonCheckout {
+    background-color: red !important;
+    border-color: red !important;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+  }
+  .buttonCheckout:hover {
+    background-color: black !important;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+  }
+.error{
+    color: red;
+    font-weight: 500;
+    font-size: 12px;
+}
+.ordenID{
+    margin-top: -20px;
+    font-weight: 600;
+    color: red;
+}
+.ordenTxt{
+    margin-top: -20px;
+    font-weight: 600;
+}
